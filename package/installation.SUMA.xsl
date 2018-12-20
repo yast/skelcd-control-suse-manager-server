@@ -206,7 +206,7 @@ textdomain="control"
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
                <desired_size>60GiB</desired_size>
-	       !<--               <min_size>40GiB</min_size> -->
+	       <!--               <min_size>40GiB</min_size> -->
                <min_size>4GiB</min_size>
                <max_size>80GiB</max_size>
                <!-- Always use snapshots, no matter what -->
