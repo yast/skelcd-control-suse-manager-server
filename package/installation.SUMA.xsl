@@ -40,7 +40,7 @@ textdomain="control"
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
            <proposal>
-             <lvm config:type="boolean">true</lvm>
+             <lvm config:type="boolean">false</lvm>
              <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
@@ -55,7 +55,8 @@ textdomain="control"
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
                <desired_size>60GiB</desired_size>
-               <min_size>40GiB</min_size>
+	       <!--               <min_size>40GiB</min_size> -->
+               <min_size>4GiB</min_size>
                <max_size>80GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
@@ -124,6 +125,51 @@ textdomain="control"
                <max_size>2GiB</max_size>
              </volume>
 
+<!-- separate /var/spacewalk: 1 GiB - unlimited -->
+            <volume>
+	    <mount_point>/var/spacewalk</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">1 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+
+<!-- separate /var/lib/pgsql: 1 GiB - unlimited -->
+            <volume>
+	    <mount_point>/var/lib/pgsql</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">1 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+
+
              <!--
                No home filesystem, so the option of a separate home is not even
                offered to the user.
@@ -134,7 +180,7 @@ textdomain="control"
            </volumes>
         </partitioning>
         <software>
-          <default_patterns>base gnome_basic sap_server</default_patterns>
+          <default_patterns>base</default_patterns>
         </software>
         </system_role>
   
@@ -145,7 +191,7 @@ textdomain="control"
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
            <proposal>
-             <lvm config:type="boolean">true</lvm>
+             <lvm config:type="boolean">false</lvm>
              <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
@@ -160,7 +206,8 @@ textdomain="control"
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
                <desired_size>60GiB</desired_size>
-               <min_size>40GiB</min_size>
+	       !<--               <min_size>40GiB</min_size> -->
+               <min_size>4GiB</min_size>
                <max_size>80GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
@@ -229,6 +276,74 @@ textdomain="control"
                <max_size>2GiB</max_size>
              </volume>
 
+<!-- separate /var/spacewalk: 1 GiB - unlimited -->
+            <volume>
+	    <mount_point>/var/spacewalk</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">1 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+
+<!-- separate /var/lib/pgsql: 1 GiB - unlimited -->
+            <volume>
+	    <mount_point>/var/lib/pgsql</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">1 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+
+
+<!-- separate /srv: 1 GiB - unlimited -->
+            <volume>
+	    <mount_point>/srv</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">1 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+
+
              <!--
                No home filesystem, so the option of a separate home is not even
                offered to the user.
@@ -239,7 +354,7 @@ textdomain="control"
            </volumes>
         </partitioning>
         <software>
-          <default_patterns>base gnome_basic sap_server</default_patterns>
+          <default_patterns>base</default_patterns>
         </software>
         </system_role>
       <xsl:copy>
