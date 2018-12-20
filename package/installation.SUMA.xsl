@@ -131,6 +131,7 @@ textdomain="control"
                 <fs_type>xfs</fs_type>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
 
                 <desired_size config:type="disksize">10 GiB</desired_size>
                 <min_size config:type="disksize">1 GiB</min_size>
@@ -153,6 +154,7 @@ textdomain="control"
                 <fs_type>xfs</fs_type>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
 
                 <desired_size config:type="disksize">10 GiB</desired_size>
                 <min_size config:type="disksize">1 GiB</min_size>
@@ -282,6 +284,7 @@ textdomain="control"
                 <fs_type>xfs</fs_type>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
 
                 <desired_size config:type="disksize">10 GiB</desired_size>
                 <min_size config:type="disksize">1 GiB</min_size>
@@ -304,6 +307,7 @@ textdomain="control"
                 <fs_type>xfs</fs_type>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
 
                 <desired_size config:type="disksize">10 GiB</desired_size>
                 <min_size config:type="disksize">1 GiB</min_size>
@@ -326,7 +330,8 @@ textdomain="control"
 	    <mount_point>/srv</mount_point>
                 <fs_type>xfs</fs_type>
 
-                <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
 
                 <desired_size config:type="disksize">10 GiB</desired_size>
                 <min_size config:type="disksize">1 GiB</min_size>
