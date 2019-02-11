@@ -56,7 +56,7 @@ textdomain="control"
                <fs_type>btrfs</fs_type>
                <desired_size>60GiB</desired_size>
 	       <!--               <min_size>40GiB</min_size> -->
-               <min_size>4GiB</min_size>
+               <min_size>40GiB</min_size>
                <max_size>80GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
@@ -125,7 +125,7 @@ textdomain="control"
                <max_size>2GiB</max_size>
              </volume>
 
-<!-- separate /var/spacewalk: 1 GiB - unlimited -->
+<!-- separate /var/spacewalk: 100 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/spacewalk</mount_point>
                 <fs_type>xfs</fs_type>
@@ -133,10 +133,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">1 GiB</min_size>
+                <desired_size config:type="disksize">100 GiB</desired_size>
+                <min_size config:type="disksize">100 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">100 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -148,7 +148,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 
-<!-- separate /var/lib/pgsql: 1 GiB - unlimited -->
+<!-- separate /var/lib/pgsql: 40 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/lib/pgsql</mount_point>
                 <fs_type>xfs</fs_type>
@@ -156,10 +156,33 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">1 GiB</min_size>
+                <desired_size config:type="disksize">40 GiB</desired_size>
+                <min_size config:type="disksize">40 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+
+<!-- separate /srv: 40 GiB - unlimited -->
+            <volume>
+	    <mount_point>/srv</mount_point>
+                <fs_type>xfs</fs_type>
+
+		<proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
+
+                <desired_size config:type="disksize">40 GiB</desired_size>
+                <min_size config:type="disksize">40 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -278,7 +301,7 @@ textdomain="control"
                <max_size>2GiB</max_size>
              </volume>
 
-<!-- separate /var/spacewalk: 1 GiB - unlimited -->
+<!-- separate /var/spacewalk: 100 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/spacewalk</mount_point>
                 <fs_type>xfs</fs_type>
@@ -286,10 +309,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">1 GiB</min_size>
+                <desired_size config:type="disksize">100 GiB</desired_size>
+                <min_size config:type="disksize">100 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">100 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -301,7 +324,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 
-<!-- separate /var/lib/pgsql: 1 GiB - unlimited -->
+<!-- separate /var/lib/pgsql: 40 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/lib/pgsql</mount_point>
                 <fs_type>xfs</fs_type>
@@ -309,10 +332,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">1 GiB</min_size>
+                <desired_size config:type="disksize">40 GiB</desired_size>
+                <min_size config:type="disksize">40 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -324,8 +347,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 
-
-<!-- separate /srv: 1 GiB - unlimited -->
+<!-- separate /srv: 100 GiB - unlimited -->
             <volume>
 	    <mount_point>/srv</mount_point>
                 <fs_type>xfs</fs_type>
@@ -333,10 +355,10 @@ textdomain="control"
 		<proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">1 GiB</min_size>
+                <desired_size config:type="disksize">100 GiB</desired_size>
+                <min_size config:type="disksize">100 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>

@@ -44,7 +44,7 @@ BuildRequires: diffutils
 # Use FHS compliant path
 Requires:       yast2 >= 4.1.41
 
-Provides:       system-installation() = SUMA
+Provides:       system-installation() = SUSE-Manager-Server
 
 #
 ######################################################################
@@ -58,10 +58,6 @@ License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source0:        installation.SUMA.xsl
-
-# SUSEConnect does not build for i586 and s390 and is not supported on those architectures
-# bsc#1088552
-ExcludeArch:    %ix86 s390
 
 %description
 SUMA control file needed for installation
