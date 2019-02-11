@@ -205,7 +205,7 @@ textdomain="control"
            </volumes>
         </partitioning>
         <software>
-          <default_patterns>base</default_patterns>
+          <default_patterns>base suma_server</default_patterns>
         </software>
         </system_role>
   
@@ -381,7 +381,7 @@ textdomain="control"
            </volumes>
         </partitioning>
         <software>
-          <default_patterns>base</default_patterns>
+          <default_patterns>base suma_server suma_retail</default_patterns>
         </software>
         </system_role>
       <xsl:copy>
