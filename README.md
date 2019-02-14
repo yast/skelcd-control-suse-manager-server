@@ -1,4 +1,4 @@
-skelcd-control-SUMA
+skelcd-control-suse-manager-server
 ===================
 
 [![Travis Build](https://travis-ci.org/yast/skelcd-control-SLES4SAP.svg?branch=master)](https://travis-ci.org/yast/skelcd-control-SLES)

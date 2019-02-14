@@ -1,5 +1,5 @@
 #
-# spec file for package skelcd-control-SUMA
+# spec file for package skelcd-control-suse-manager-server
 #
 # Copyright (c) 2016 SUSE LINUX GmbH, Nuernberg, Germany.
 #
@@ -20,14 +20,14 @@
 #
 # IMPORTANT: Please do not change the control file or this spec file
 #   in build service directly, use
-#   https://github.com/yast/skelcd-control-SUMA repository
+#   https://github.com/yast/skelcd-control-suse-manager-server repository
 #
-#   See https://github.com/yast/skelcd-control-SUMA/blob/master/CONTRIBUTING.md
+#   See https://github.com/yast/skelcd-control-suse-manager-server/blob/master/CONTRIBUTING.md
 #   for more details.
 #
 ######################################################################
 
-%define         skelcd_name SUMA
+%define         skelcd_name suse-manager-server
 
 Name:           skelcd-control-%{skelcd_name}
 # xsltproc for converting SLES control file to SLES-for-VMware
@@ -49,18 +49,18 @@ Provides:       system-installation() = SUSE-Manager-Server
 #
 ######################################################################
 
-Url:            https://github.com/yast/skelcd-control-SUMA
+Url:            https://github.com/yast/skelcd-control-suse-manager-server
 AutoReqProv:    off
 Version:        4.0.0
 Release:        0
-Summary:        SUMA control file needed for installation
+Summary:        SUSE Manager Server control file needed for installation
 License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source0:        installation.SUMA.xsl
+Source0:        installation.suse-manager-server.xsl
 
 %description
-SUMA control file needed for installation
+SUSE Manager Server control file needed for installation
 
 %prep
 
