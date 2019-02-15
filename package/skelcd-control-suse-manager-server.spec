@@ -59,6 +59,10 @@ Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source0:        installation.suse-manager-server.xsl
 
+# SUSEConnect does not build for i586 and s390 and is not supported on those architectures
+# bsc#1088552
+ExcludeArch:    %ix86 s390
+
 %description
 SUSE Manager Server control file needed for installation
 
