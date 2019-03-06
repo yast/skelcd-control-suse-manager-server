@@ -45,7 +45,7 @@ textdomain="control"
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
-             <lvm_vg_strategy>use_needed</lvm_vg_strategy>
+             <lvm_vg_strategy>use_available</lvm_vg_strategy>
            </proposal>
 
            <volumes config:type="list">
@@ -170,6 +170,27 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
+<!-- separate /var/cache: at least 2 GB -->
+	     <mount_point>/var/cache</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
+
+                <desired_size config:type="disksize">2 GiB</desired_size>
+                <min_size config:type="disksize">2 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <weight config:type="integer">20</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
 
 <!-- separate /srv: 40 GiB - unlimited -->
             <volume>
@@ -193,15 +214,6 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
-
-
-             <!--
-               No home filesystem, so the option of a separate home is not even
-               offered to the user.
-               On the other hand, a separate data volume (optional or mandatory) could
-               be defined.
-             -->
-
            </volumes>
         </partitioning>
         <software>
@@ -346,6 +358,27 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
+<!-- separate /var/cache: at least 2 GB -->
+	     <mount_point>/var/cache</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
+
+                <desired_size config:type="disksize">2 GiB</desired_size>
+                <min_size config:type="disksize">2 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <weight config:type="integer">20</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
 
 <!-- separate /srv: 100 GiB - unlimited -->
             <volume>
@@ -369,15 +402,6 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
-
-
-             <!--
-               No home filesystem, so the option of a separate home is not even
-               offered to the user.
-               On the other hand, a separate data volume (optional or mandatory) could
-               be defined.
-             -->
-
            </volumes>
         </partitioning>
         <software>
