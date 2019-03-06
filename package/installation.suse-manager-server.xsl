@@ -171,6 +171,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 <!-- separate /var/cache: at least 2 GB -->
+	     <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
 
@@ -359,6 +360,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 <!-- separate /var/cache: at least 2 GB -->
+            <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
 
