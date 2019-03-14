@@ -51,7 +51,7 @@ Provides:       system-installation() = SUSE-Manager-Server
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-server
 AutoReqProv:    off
-Version:        4.0.1
+Version:        4.0.2
 Release:        0
 Summary:        SUSE Manager Server control file needed for installation
 License:        MIT

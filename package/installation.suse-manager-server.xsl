@@ -40,7 +40,7 @@ textdomain="control"
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
            <proposal>
-             <lvm config:type="boolean">false</lvm>
+             <lvm config:type="boolean">true</lvm>
              <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
@@ -54,10 +54,10 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size>60GiB</desired_size>
+               <desired_size>100GiB</desired_size>
 	       <!--               <min_size>40GiB</min_size> -->
                <min_size>40GiB</min_size>
-               <max_size>80GiB</max_size>
+	       <max_size>100GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -133,10 +133,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">100 GiB</desired_size>
+                <desired_size config:type="disksize">300 GiB</desired_size>
                 <min_size config:type="disksize">100 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">100 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">300 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -148,7 +148,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 
-<!-- separate /var/lib/pgsql: 40 GiB - unlimited -->
+<!-- separate /var/lib/pgsql: 50 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/lib/pgsql</mount_point>
                 <fs_type>xfs</fs_type>
@@ -156,10 +156,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">40 GiB</desired_size>
-                <min_size config:type="disksize">40 GiB</min_size>
+                <desired_size config:type="disksize">60 GiB</desired_size>
+                <min_size config:type="disksize">50 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">60 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -178,10 +178,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">2 GiB</desired_size>
+                <desired_size config:type="disksize">4 GiB</desired_size>
                 <min_size config:type="disksize">2 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">4 GiB</max_size_lvm>
                 <weight config:type="integer">20</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -201,10 +201,10 @@ textdomain="control"
 		<proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">40 GiB</desired_size>
+                <desired_size config:type="disksize">80 GiB</desired_size>
                 <min_size config:type="disksize">40 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">80 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -229,12 +229,12 @@ textdomain="control"
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
            <proposal>
-             <lvm config:type="boolean">false</lvm>
+             <lvm config:type="boolean">true</lvm>
              <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
-             <lvm_vg_strategy>use_needed</lvm_vg_strategy>
+             <lvm_vg_strategy>use_available</lvm_vg_strategy>
            </proposal>
 
            <volumes config:type="list">
@@ -243,10 +243,10 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size>60GiB</desired_size>
+               <desired_size>100GiB</desired_size>
 	       <!--               <min_size>40GiB</min_size> -->
                <min_size>4GiB</min_size>
-               <max_size>80GiB</max_size>
+               <max_size>100GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -322,10 +322,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">100 GiB</desired_size>
+                <desired_size config:type="disksize">300 GiB</desired_size>
                 <min_size config:type="disksize">100 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">100 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">300 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -337,7 +337,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 
-<!-- separate /var/lib/pgsql: 40 GiB - unlimited -->
+<!-- separate /var/lib/pgsql: 50 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/lib/pgsql</mount_point>
                 <fs_type>xfs</fs_type>
@@ -345,10 +345,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">40 GiB</desired_size>
-                <min_size config:type="disksize">40 GiB</min_size>
+                <desired_size config:type="disksize">60 GiB</desired_size>
+                <min_size config:type="disksize">50 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">60 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -367,10 +367,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">2 GiB</desired_size>
+                <desired_size config:type="disksize">4 GiB</desired_size>
                 <min_size config:type="disksize">2 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">4 GiB</max_size_lvm>
                 <weight config:type="integer">20</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -382,7 +382,7 @@ textdomain="control"
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
 
-<!-- separate /srv: 100 GiB - unlimited -->
+<!-- separate /srv: 200 GiB - unlimited -->
             <volume>
 	    <mount_point>/srv</mount_point>
                 <fs_type>xfs</fs_type>
@@ -390,10 +390,10 @@ textdomain="control"
 		<proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">100 GiB</desired_size>
-                <min_size config:type="disksize">100 GiB</min_size>
+                <desired_size config:type="disksize">300 GiB</desired_size>
+                <min_size config:type="disksize">200 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">300 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -418,18 +418,19 @@ textdomain="control"
   <xsl:template xml:space="preserve" match="n:minimal_role">
       <suma_role>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>SUSE Manager Server</label>
+	      <label>SUSE Manager Server</label>
       </suma_role>
       <suma_role_description>
-          <label>• Ideal management solution</label>
+	      <label>• Manager Server pattern
+• LVM-based partition layout</label>
       </suma_role_description>
       <suma_retail_role>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>SUSE Manager Retail Server</label>
+	      <label>SUSE Manager for Retail Server</label>
       </suma_retail_role>
       <suma_retail_role_description>
-	      <label>• Ideal option for retail environment
-• Additional functionality for retail</label>
+	      <label>• Retail Server Pattern
+• Larger volume for terminal images</label>
       </suma_retail_role_description>
       <xsl:copy>
         <xsl:apply-templates/>
