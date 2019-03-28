@@ -139,7 +139,7 @@ textdomain="control"
                 <max_size_lvm config:type="disksize">300 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
-                <disable_order config:type="integer">1</disable_order>
+                <disable_order config:type="integer">4</disable_order>
 
                 <!-- if this volume is disabled we want "/" to increase -->
                 <fallback_for_desired_size>/</fallback_for_desired_size>
@@ -162,7 +162,7 @@ textdomain="control"
                 <max_size_lvm config:type="disksize">60 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
-                <disable_order config:type="integer">1</disable_order>
+                <disable_order config:type="integer">3</disable_order>
 
                 <!-- if this volume is disabled we want "/" to increase -->
                 <fallback_for_desired_size>/</fallback_for_desired_size>
@@ -207,7 +207,7 @@ textdomain="control"
                 <max_size_lvm config:type="disksize">80 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
-                <disable_order config:type="integer">1</disable_order>
+                <disable_order config:type="integer">2</disable_order>
 
                 <!-- if this volume is disabled we want "/" to increase -->
                 <fallback_for_desired_size>/</fallback_for_desired_size>
@@ -328,7 +328,7 @@ textdomain="control"
                 <max_size_lvm config:type="disksize">300 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
-                <disable_order config:type="integer">1</disable_order>
+                <disable_order config:type="integer">4</disable_order>
 
                 <!-- if this volume is disabled we want "/" to increase -->
                 <fallback_for_desired_size>/</fallback_for_desired_size>
@@ -351,7 +351,7 @@ textdomain="control"
                 <max_size_lvm config:type="disksize">60 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
-                <disable_order config:type="integer">1</disable_order>
+                <disable_order config:type="integer">3</disable_order>
 
                 <!-- if this volume is disabled we want "/" to increase -->
                 <fallback_for_desired_size>/</fallback_for_desired_size>
@@ -396,7 +396,7 @@ textdomain="control"
                 <max_size_lvm config:type="disksize">300 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
-                <disable_order config:type="integer">1</disable_order>
+                <disable_order config:type="integer">2</disable_order>
 
                 <!-- if this volume is disabled we want "/" to increase -->
                 <fallback_for_desired_size>/</fallback_for_desired_size>
