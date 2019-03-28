@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Mar 28 08:24:14 UTC 2019 - jsrain@suse.cz
+
+- configured order of disabling volumes on small disks
+- 4.0.3
+
+-------------------------------------------------------------------
 Thu Mar 14 06:45:43 UTC 2019 - jsrain@suse.cz
 
 - udpated labels
