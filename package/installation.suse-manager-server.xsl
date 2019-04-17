@@ -219,6 +219,9 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_server</default_patterns>
+          <!-- the cdata trick produces an empty string in the data
+               instead of omitting the key entirely -->
+          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
   
@@ -408,6 +411,9 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_server suma_retail</default_patterns>
+          <!-- the cdata trick produces an empty string in the data
+               instead of omitting the key entirely -->
+          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
       <xsl:copy>
