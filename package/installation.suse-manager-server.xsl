@@ -227,7 +227,6 @@ textdomain="control"
 	  <xsl:element name="optional_default_patterns">
             <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
           </xsl:element>
-          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
   
@@ -425,7 +424,6 @@ textdomain="control"
 	  <xsl:element name="optional_default_patterns">
             <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
           </xsl:element>
-          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
       <xsl:copy>
