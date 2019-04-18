@@ -219,8 +219,14 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_server</default_patterns>
-          <!-- the cdata trick produces an empty string in the data
-               instead of omitting the key entirely -->
+          <!-- this is comment in the style sheet not commented into result -->
+          <xsl:comment>
+          the cdata trick produces an empty string in the data
+	  instead of omitting the key entirely
+          </xsl:comment>			  
+	  <xsl:element name="optional_default_patterns">
+            <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
+          </xsl:element>
           <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
@@ -411,8 +417,14 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_server suma_retail</default_patterns>
-          <!-- the cdata trick produces an empty string in the data
-               instead of omitting the key entirely -->
+          <!-- this is comment in the style sheet not commented into result -->
+          <xsl:comment>
+          the cdata trick produces an empty string in the data
+	  instead of omitting the key entirely
+          </xsl:comment>			  
+	  <xsl:element name="optional_default_patterns">
+            <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
+          </xsl:element>
           <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
