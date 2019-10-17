@@ -37,8 +37,8 @@ BuildRequires:  libxml2-tools
 # Added skelcd macros
 BuildRequires: yast2-installation-control >= 4.1.5
 
-# Original SLES control file (FHS compliant)
-BuildRequires: skelcd-control-SLES >= 15.1.0
+# Original SLES control file (skip registration)
+BuildRequires: skelcd-control-SLES >= 15.2.0
 BuildRequires: diffutils
 
 # Use FHS compliant path
@@ -51,7 +51,7 @@ Provides:       system-installation() = SUSE-Manager-Server
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-server
 AutoReqProv:    off
-Version:        4.0.4
+Version:        4.2.0
 Release:        0
 Summary:        SUSE Manager Server control file needed for installation
 License:        MIT
