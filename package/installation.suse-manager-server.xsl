@@ -170,7 +170,7 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
-<!-- separate /var/cache: at least 2 GB -->
+<!-- separate /var/cache: 4 GB - unlimited -->
 	     <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
@@ -178,10 +178,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">4 GiB</desired_size>
-                <min_size config:type="disksize">2 GiB</min_size>
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">4 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">4 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">10 GiB</max_size_lvm>
                 <weight config:type="integer">20</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -367,7 +367,7 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
-<!-- separate /var/cache: at least 2 GB -->
+<!-- separate /var/cache: 4 GB - unlimited -->
             <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
@@ -375,10 +375,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">4 GiB</desired_size>
-                <min_size config:type="disksize">2 GiB</min_size>
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">4 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">4 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">10 GiB</max_size_lvm>
                 <weight config:type="integer">20</weight>
 
                 <disable_order config:type="integer">1</disable_order>
