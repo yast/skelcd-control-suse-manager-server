@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Mar 17 15:12:02 UTC 2020 - Michael Calmer <mc@suse.com>
+
+- Increase proposed size for /var/cache (bsc#1166841)
+- 4.1.1
+
+-------------------------------------------------------------------
 Wed Feb 26 15:11:03 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
 
 - Added default preselected modules in offline installation
