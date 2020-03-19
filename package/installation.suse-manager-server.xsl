@@ -428,6 +428,10 @@ textdomain="control"
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
              <lvm_vg_strategy>use_available</lvm_vg_strategy>
+             <separate_vgs config:type="boolean">true</separate_vgs>
+             <multidisk_first config:type="boolean">true</multidisk_first>
+             <delete_resize_configurable config:type="boolean">false</delete_resize_configurable>
+             <allocate_volume_mode config:type="symbol">device</allocate_volume_mode>
            </proposal>
 
            <volumes config:type="list">
@@ -510,7 +514,8 @@ textdomain="control"
 <!-- separate /var/spacewalk: 100 GiB - unlimited -->
             <volume>
 	    <mount_point>/var/spacewalk</mount_point>
-                <fs_type>xfs</fs_type>
+	        <fs_type>xfs</fs_type>
+	        <separate_vg_name>spacewalk</separate_vg_name>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -534,6 +539,7 @@ textdomain="control"
             <volume>
 	    <mount_point>/var/lib/pgsql</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>pgsql</separate_vg_name>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -556,6 +562,7 @@ textdomain="control"
 	     <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>system_cache</separate_vg_name>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -579,6 +586,7 @@ textdomain="control"
             <volume>
 	    <mount_point>/srv</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>srv</separate_vg_name>
 
 		<proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -625,7 +633,11 @@ textdomain="control"
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
              <lvm_vg_strategy>use_available</lvm_vg_strategy>
-           </proposal>
+             <separate_vgs config:type="boolean">true</separate_vgs>
+             <multidisk_first config:type="boolean">true</multidisk_first>
+             <delete_resize_configurable config:type="boolean">false</delete_resize_configurable>
+             <allocate_volume_mode config:type="symbol">device</allocate_volume_mode>
+            </proposal>
 
            <volumes config:type="list">
              <!-- The root filesystem -->
@@ -708,6 +720,7 @@ textdomain="control"
             <volume>
 	    <mount_point>/var/spacewalk</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>spacewalk</separate_vg_name>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -731,6 +744,7 @@ textdomain="control"
             <volume>
 	    <mount_point>/var/lib/pgsql</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>pgsql</separate_vg_name>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -753,6 +767,7 @@ textdomain="control"
             <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>system_cache</separate_vg_name>
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
@@ -776,6 +791,7 @@ textdomain="control"
             <volume>
 	    <mount_point>/srv</mount_point>
                 <fs_type>xfs</fs_type>
+	        <separate_vg_name>srv</separate_vg_name>
 
 		<proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
