@@ -170,7 +170,7 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
-<!-- separate /var/cache: at least 2 GB -->
+<!-- separate /var/cache: 4 GB - unlimited -->
 	     <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
@@ -178,10 +178,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">4 GiB</desired_size>
-                <min_size config:type="disksize">2 GiB</min_size>
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">4 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">4 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">10 GiB</max_size_lvm>
                 <weight config:type="integer">20</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -219,9 +219,14 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_server</default_patterns>
-          <!-- the cdata trick produces an empty string in the data
-               instead of omitting the key entirely -->
-          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
+          <!-- this is comment in the style sheet not commented into result -->
+          <xsl:comment>
+          the cdata trick produces an empty string in the data
+	  instead of omitting the key entirely
+          </xsl:comment>			  
+	  <xsl:element name="optional_default_patterns">
+            <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
+          </xsl:element>
         </software>
         </system_role>
   
@@ -362,7 +367,7 @@ textdomain="control"
                 <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
                 <fallback_for_weight>/</fallback_for_weight>
              </volume>
-<!-- separate /var/cache: at least 2 GB -->
+<!-- separate /var/cache: 4 GB - unlimited -->
             <volume>
 	     <mount_point>/var/cache</mount_point>
                 <fs_type>xfs</fs_type>
@@ -370,10 +375,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">4 GiB</desired_size>
-                <min_size config:type="disksize">2 GiB</min_size>
+                <desired_size config:type="disksize">10 GiB</desired_size>
+                <min_size config:type="disksize">4 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">4 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">10 GiB</max_size_lvm>
                 <weight config:type="integer">20</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -411,9 +416,14 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_server suma_retail</default_patterns>
-          <!-- the cdata trick produces an empty string in the data
-               instead of omitting the key entirely -->
-          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
+          <!-- this is comment in the style sheet not commented into result -->
+          <xsl:comment>
+          the cdata trick produces an empty string in the data
+	  instead of omitting the key entirely
+          </xsl:comment>			  
+	  <xsl:element name="optional_default_patterns">
+            <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
+          </xsl:element>
         </software>
       </system_role>
       <system_role>
@@ -866,4 +876,21 @@ textdomain="control"
         <xsl:apply-templates/>
       </xsl:copy>
   </xsl:template>
+
+  <!-- add a new "software/default_modules" section just after the "textdomain" -->
+  <xsl:template xml:space="preserve" match="n:textdomain">
+    <xsl:copy>
+      <xsl:apply-templates/>
+    </xsl:copy>
+    <software>
+      <xsl:comment> the default preselected modules in offline installation </xsl:comment>
+      <default_modules config:type="list">
+        <default_module>sle-module-basesystem</default_module>
+        <default_module>sle-module-python2</default_module>
+        <default_module>sle-module-server-applications</default_module>
+        <default_module>sle-module-web-scripting</default_module>
+      </default_modules>
+    </software>
+  </xsl:template>
+
 </xsl:stylesheet>

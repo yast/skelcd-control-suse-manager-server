@@ -1,4 +1,34 @@
 -------------------------------------------------------------------
+Tue Mar 17 15:12:02 UTC 2020 - Michael Calmer <mc@suse.com>
+
+- Increase proposed size for /var/cache (bsc#1166841)
+- 4.1.1
+
+-------------------------------------------------------------------
+Wed Feb 26 15:11:03 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
+
+- Added default preselected modules in offline installation
+  (jsc#SLE-8040)
+
+-------------------------------------------------------------------
+Wed Nov 27 17:26:55 UTC 2019 - Julio González Gil <jgonzalez@suse.com>
+
+- SUSE Manager version 4.1.0 (bsc#1157988)
+
+-------------------------------------------------------------------
+Thu Oct 17 10:59:57 UTC 2019 - Josef Reidinger <jreidinger@suse.com>
+
+- Skip the registration step on the online and offline installation
+  medium (jsc#SLE-7214)
+- 15.2.0
+
+-------------------------------------------------------------------
+Thu Apr 18 11:55:55 UTC 2019 - jsrain@suse.cz
+
+- fixes of the XSLT transformation (bsc#1131987)
+- 4.0.5
+
+-------------------------------------------------------------------
 Wed Apr 17 07:37:23 UTC 2019 - jsrain@suse.cz
 
 - do not install 32-bit pattern (bsc#1131987)
