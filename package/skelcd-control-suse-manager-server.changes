@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Mar 19 15:35:13 UTC 2020 - jsrain@168.254.211
+
+- add system roles utilizing multi-disk proposal (jsc#SLE-7238)
+- 4.1.2
+
+-------------------------------------------------------------------
 Tue Mar 17 15:12:02 UTC 2020 - Michael Calmer <mc@suse.com>
 
 - Increase proposed size for /var/cache (bsc#1166841)
