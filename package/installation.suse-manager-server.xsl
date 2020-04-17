@@ -41,9 +41,9 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <windows_delete_mode>all</windows_delete_mode>
-             <linux_delete_mode>all</linux_delete_mode>
-             <other_delete_mode>all</other_delete_mode>
+             <windows_delete_mode config:type="symbol">all</windows_delete_mode>
+             <linux_delete_mode config:type="symbol">all</linux_delete_mode>
+             <other_delete_mode config:type="symbol">all</other_delete_mode>
              <lvm_vg_strategy>use_available</lvm_vg_strategy>
            </proposal>
 
@@ -237,9 +237,9 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <windows_delete_mode>all</windows_delete_mode>
-             <linux_delete_mode>all</linux_delete_mode>
-             <other_delete_mode>all</other_delete_mode>
+             <windows_delete_mode config:type="symbol">all</windows_delete_mode>
+             <linux_delete_mode config:type="symbol">all</linux_delete_mode>
+             <other_delete_mode config:type="symbol">all</other_delete_mode>
              <lvm_vg_strategy>use_available</lvm_vg_strategy>
            </proposal>
 
@@ -431,9 +431,9 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <windows_delete_mode>all</windows_delete_mode>
-             <linux_delete_mode>all</linux_delete_mode>
-             <other_delete_mode>all</other_delete_mode>
+             <windows_delete_mode config:type="symbol">all</windows_delete_mode>
+             <linux_delete_mode config:type="symbol">all</linux_delete_mode>
+             <other_delete_mode config:type="symbol">all</other_delete_mode>
              <lvm_vg_strategy>use_available</lvm_vg_strategy>
              <separate_vgs config:type="boolean">true</separate_vgs>
              <multidisk_first config:type="boolean">true</multidisk_first>
@@ -635,9 +635,9 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <windows_delete_mode>all</windows_delete_mode>
-             <linux_delete_mode>all</linux_delete_mode>
-             <other_delete_mode>all</other_delete_mode>
+             <windows_delete_mode config:type="symbol">all</windows_delete_mode>
+             <linux_delete_mode config:type="symbol">all</linux_delete_mode>
+             <other_delete_mode config:type="symbol">all</other_delete_mode>
              <lvm_vg_strategy>use_available</lvm_vg_strategy>
              <separate_vgs config:type="boolean">true</separate_vgs>
              <multidisk_first config:type="boolean">true</multidisk_first>
