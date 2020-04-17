@@ -53,10 +53,10 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size config:type="disksize">100GiB</desired_size>
-	       <!--               <min_size config:type="disksize">40GiB</min_size> -->
-               <min_size config:type="disksize">40GiB</min_size>
-	       <max_size config:type="disksize">100GiB</max_size>
+               <desired_size config:type="disksize">100 GiB</desired_size>
+	       <!--               <min_size config:type="disksize">40 GiB</min_size> -->
+               <min_size config:type="disksize">40 GiB</min_size>
+	       <max_size config:type="disksize">100 GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -119,9 +119,9 @@ textdomain="control"
              <volume>
                <mount_point>swap</mount_point>
                <fs_type>swap</fs_type>
-               <desired_size config:type="disksize">2GiB</desired_size>
-               <min_size config:type="disksize">2GiB</min_size>
-               <max_size config:type="disksize">2GiB</max_size>
+               <desired_size config:type="disksize">2 GiB</desired_size>
+               <min_size config:type="disksize">2 GiB</min_size>
+               <max_size config:type="disksize">2 GiB</max_size>
              </volume>
 
 <!-- separate /var/spacewalk: 100 GiB - unlimited -->
@@ -249,10 +249,10 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size config:type="disksize">100GiB</desired_size>
-	       <!--               <min_size config:type="disksize">40GiB</min_size> -->
-               <min_size config:type="disksize">4GiB</min_size>
-               <max_size config:type="disksize">100GiB</max_size>
+               <desired_size config:type="disksize">100 GiB</desired_size>
+	       <!--               <min_size config:type="disksize">40 GiB</min_size> -->
+               <min_size config:type="disksize">4 GiB</min_size>
+               <max_size config:type="disksize">100 GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -315,9 +315,9 @@ textdomain="control"
              <volume>
                <mount_point>swap</mount_point>
                <fs_type>swap</fs_type>
-               <desired_size config:type="disksize">2GiB</desired_size>
-               <min_size config:type="disksize">2GiB</min_size>
-               <max_size config:type="disksize">2GiB</max_size>
+               <desired_size config:type="disksize">2 GiB</desired_size>
+               <min_size config:type="disksize">2 GiB</min_size>
+               <max_size config:type="disksize">2 GiB</max_size>
              </volume>
 
 <!-- separate /var/spacewalk: 100 GiB - unlimited -->
@@ -447,10 +447,10 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size config:type="disksize">100GiB</desired_size>
-	       <!--               <min_size config:type="disksize">40GiB</min_size> -->
-               <min_size config:type="disksize">40GiB</min_size>
-	       <max_size config:type="disksize">100GiB</max_size>
+               <desired_size config:type="disksize">100 GiB</desired_size>
+	       <!--               <min_size config:type="disksize">40 GiB</min_size> -->
+               <min_size config:type="disksize">40 GiB</min_size>
+	       <max_size config:type="disksize">100 GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -513,9 +513,9 @@ textdomain="control"
              <volume>
                <mount_point>swap</mount_point>
                <fs_type>swap</fs_type>
-               <desired_size config:type="disksize">2GiB</desired_size>
-               <min_size config:type="disksize">2GiB</min_size>
-               <max_size config:type="disksize">2GiB</max_size>
+               <desired_size config:type="disksize">2 GiB</desired_size>
+               <min_size config:type="disksize">2 GiB</min_size>
+               <max_size config:type="disksize">2 GiB</max_size>
              </volume>
 
 <!-- separate /var/spacewalk: 100 GiB - unlimited -->
@@ -651,10 +651,10 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size config:type="disksize">100GiB</desired_size>
-	       <!--               <min_size config:type="disksize">40GiB</min_size> -->
-               <min_size config:type="disksize">4GiB</min_size>
-               <max_size config:type="disksize">100GiB</max_size>
+               <desired_size config:type="disksize">100 GiB</desired_size>
+	       <!--               <min_size config:type="disksize">40 GiB</min_size> -->
+               <min_size config:type="disksize">4 GiB</min_size>
+               <max_size config:type="disksize">100 GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -717,9 +717,9 @@ textdomain="control"
              <volume>
                <mount_point>swap</mount_point>
                <fs_type>swap</fs_type>
-               <desired_size config:type="disksize">2GiB</desired_size>
-               <min_size config:type="disksize">2GiB</min_size>
-               <max_size config:type="disksize">2GiB</max_size>
+               <desired_size config:type="disksize">2 GiB</desired_size>
+               <min_size config:type="disksize">2 GiB</min_size>
+               <max_size config:type="disksize">2 GiB</max_size>
              </volume>
 
 <!-- separate /var/spacewalk: 100 GiB - unlimited -->
