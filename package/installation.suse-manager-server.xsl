@@ -41,7 +41,6 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
@@ -238,7 +237,6 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
@@ -433,7 +431,6 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
@@ -638,7 +635,6 @@ textdomain="control"
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
