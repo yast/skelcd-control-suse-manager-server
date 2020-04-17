@@ -36,6 +36,7 @@ textdomain="control"
   <xsl:template xml:space="preserve" match="n:system_role[n:id='minimal_role']">
         <system_role>
         <id>suma_role</id>
+        <order config:type="integer">1</order>
 
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
@@ -232,6 +233,7 @@ textdomain="control"
 
         <system_role>
         <id>suma_retail_role</id>
+        <order config:type="integer">2</order>
 
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
@@ -426,6 +428,7 @@ textdomain="control"
       </system_role>
       <system_role>
         <id>suma_multidisc_role</id>
+        <order config:type="integer">3</order>
 
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
@@ -620,16 +623,17 @@ textdomain="control"
           <xsl:comment>
           the cdata trick produces an empty string in the data
 	  instead of omitting the key entirely
-          </xsl:comment>			  
+          </xsl:comment>
 	  <xsl:element name="optional_default_patterns">
             <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
           </xsl:element>
         </software>
       </system_role>
-  
+
 
       <system_role>
         <id>suma_retail_multidisc_role</id>
+        <order config:type="integer">4</order>
 
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
