@@ -44,7 +44,7 @@ textdomain="control"
              <windows_delete_mode config:type="symbol">all</windows_delete_mode>
              <linux_delete_mode config:type="symbol">all</linux_delete_mode>
              <other_delete_mode config:type="symbol">all</other_delete_mode>
-             <lvm_vg_strategy>use_available</lvm_vg_strategy>
+             <lvm_vg_strategy config:type="symbol">use_available</lvm_vg_strategy>
            </proposal>
 
            <volumes config:type="list">
@@ -240,7 +240,7 @@ textdomain="control"
              <windows_delete_mode config:type="symbol">all</windows_delete_mode>
              <linux_delete_mode config:type="symbol">all</linux_delete_mode>
              <other_delete_mode config:type="symbol">all</other_delete_mode>
-             <lvm_vg_strategy>use_available</lvm_vg_strategy>
+             <lvm_vg_strategy config:type="symbol">use_available</lvm_vg_strategy>
            </proposal>
 
            <volumes config:type="list">
@@ -434,7 +434,7 @@ textdomain="control"
              <windows_delete_mode config:type="symbol">all</windows_delete_mode>
              <linux_delete_mode config:type="symbol">all</linux_delete_mode>
              <other_delete_mode config:type="symbol">all</other_delete_mode>
-             <lvm_vg_strategy>use_available</lvm_vg_strategy>
+             <lvm_vg_strategy config:type="symbol">use_available</lvm_vg_strategy>
              <separate_vgs config:type="boolean">true</separate_vgs>
              <multidisk_first config:type="boolean">true</multidisk_first>
              <delete_resize_configurable config:type="boolean">false</delete_resize_configurable>
@@ -638,7 +638,7 @@ textdomain="control"
              <windows_delete_mode config:type="symbol">all</windows_delete_mode>
              <linux_delete_mode config:type="symbol">all</linux_delete_mode>
              <other_delete_mode config:type="symbol">all</other_delete_mode>
-             <lvm_vg_strategy>use_available</lvm_vg_strategy>
+             <lvm_vg_strategy config:type="symbol">use_available</lvm_vg_strategy>
              <separate_vgs config:type="boolean">true</separate_vgs>
              <multidisk_first config:type="boolean">true</multidisk_first>
              <delete_resize_configurable config:type="boolean">false</delete_resize_configurable>
