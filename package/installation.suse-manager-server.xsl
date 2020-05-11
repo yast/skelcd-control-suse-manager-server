@@ -2,6 +2,12 @@
 Definition of the installation.SLES.xml -> installation.SLES4SAP.xml transformation.
 For now it simply copies all XML tags to the target file.
 -->
+
+<!--
+Work around for the text domain
+textdomain="control"
+-->
+
 <xsl:stylesheet version="1.0"
   xmlns:n="http://www.suse.com/1.0/yast2ns"
   xmlns:config="http://www.suse.com/1.0/configns"
@@ -10,7 +16,6 @@ For now it simply copies all XML tags to the target file.
   exclude-result-prefixes="n"
   >
 
-  <!-- Work around for the text domain textdomain="control" -->
   <xsl:output method="xml" indent="yes"/>
 
   <xsl:template match="node()|@*">
