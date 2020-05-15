@@ -860,7 +860,7 @@ For now it simply copies all XML tags to the target file.
   <xsl:template xml:space="preserve" match="n:minimal_role">
     <suma_role>
       <!-- TRANSLATORS: a label for a system role -->
-      <label>SUSE Manager Server (sigle disk)</label>
+      <label>SUSE Manager Server (single disk)</label>
     </suma_role>
     <suma_role_description>
       <label>• Manager Server pattern
@@ -869,7 +869,7 @@ For now it simply copies all XML tags to the target file.
 
     <suma_retail_role>
       <!-- TRANSLATORS: a label for a system role -->
-      <label>SUSE Manager for Retail Server (sigle disk)</label>
+      <label>SUSE Manager for Retail Server (single disk)</label>
     </suma_retail_role>
     <suma_retail_role_description>
       <label>• Retail Server Pattern
