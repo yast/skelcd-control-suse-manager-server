@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-suse-manager-server
 #
-# Copyright (c) 2019 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2020 SUSE LLC.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -59,8 +59,8 @@ Provides:       system-installation() = SUSE-Manager-Server
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-server
 AutoReqProv:    off
-# IMPORTANT: This needs to be 4.1.0 as it is the SUSE Manager version!
-Version:        4.1.4
+# IMPORTANT: This needs to be 4.2.0 as it is the SUSE Manager version!
+Version:        4.2.0
 Release:        0
 Summary:        SUSE Manager Server control file needed for installation
 License:        MIT
