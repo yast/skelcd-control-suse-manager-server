@@ -1,7 +1,8 @@
 skelcd-control-suse-manager-server
 ===================
 
-[![Travis Build](https://travis-ci.org/yast/skelcd-control-SLES4SAP.svg?branch=master)](https://travis-ci.org/yast/skelcd-control-SLES)
+[![Workflow Status](https://github.com/yast/skelcd-control-suse-manager-server/workflows/CI/badge.svg?branch=master)](
+https://github.com/yast/skelcd-control-suse-manager-server/actions?query=branch%3Amaster)
 
 
 Installation control file for SUSE Manager product. It is based on SLES
