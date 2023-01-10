@@ -909,7 +909,6 @@ textdomain="control"
   <xsl:template xml:space="preserve" match="n:software/n:default_modules">
         <default_modules config:type="list">
             <default_module>sle-module-basesystem</default_module>
-            <default_module>sle-module-python2</default_module>
             <default_module>sle-module-server-applications</default_module>
             <default_module>sle-module-web-scripting</default_module>
             <default_module>sle-module-suse-manager-server</default_module>
